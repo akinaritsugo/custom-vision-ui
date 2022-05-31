@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <%- include("./_share/metadata.ejs") %>
+    <title>Predictions</title>
+    <%- include("./_share/stylesheets.ejs") %>
+</head>
+
+<body>
+  <!-- <div class="position-relative w-100 h-100"> -->
+  <div>
+    <%- include("./_share/header.ejs") %>
+    <div class="container-fluid">
+      <div class="my-3 h3">
+        <i class="fas fa-vial"></i> Quick Test
+      </div>
+      <hr />
+      <form id="frmPredictionsTest">
+        <fieldset class="form-group">
+          <label for="trainings">トレーニング</label>
+          <select class="custom-select" id="trainings" name="trainings">
+            <option selected>Select tag name ... </option>
+            <% for (let item of locals.iterations) { %>
+              <% if (item.publishName) { %>
+              <option value="<%= item.publishName %>"><%= item.name %></option>
+              <% } %>
+            <% } %>
+          </select>
+        </fieldset>
+
+        <fieldset class="form-group">
+          <label for="file1">ファイル</label>
+          <input type="file" id="file1" name="file1" class="form-control-file" />
+        </fieldset>
+
+        <fieldset class="form-group">
+          <input type="submit" id="submit" name="submit" class="btn btn-primary" value=" 判定 " />
+        </fieldset>
+      </form>
+      <div>
+        <table id="results" class="table"></table>
+      </div>
+    </div>
+  </div>
+  <%- include("./_share/javascripts.ejs") %>
+  <script src="/public/javascripts/predictions.js"></script>
+</body>
+
+</html>

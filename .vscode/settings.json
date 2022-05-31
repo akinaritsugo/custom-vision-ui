@@ -1,0 +1,8 @@
+{
+  "appService.zipIgnorePattern": [
+    "node_modules{,/**}",
+    ".vscode{,/**}"
+  ],
+  "appService.defaultWebAppToDeploy": "/subscriptions/4fd0aa63-9e10-4cf9-b9ef-82b742799b6e/microsoft.web/sites/subscriptions/4fd0aa63-9e10-4cf9-b9ef-82b742799b6e/resourceGroups/at-func-demo-rg/providers/Microsoft.Web/sites/atappsvcdemo",
+  "appService.deploySubpath": "."
+}

@@ -1,0 +1,7 @@
+module.exports = {
+  TRAINING_KEY: "",
+  TRAINING_ENDPOINT: "",
+  PREDICTION_KEY: "",
+  PREDICTION_RESOURCEID: "",
+  PREDICTION_ENDPOINT: ""
+};
